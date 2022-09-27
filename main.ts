@@ -1,10 +1,10 @@
 import { App, LogLevel } from "@slack/bolt";
-import { GetToken, GetSigningSecret, GetAppId } from "botway.js";
+import { GetToken, GetSecret, GetAppId } from "botway.js";
 
 const app = new App({
   socketMode: true,
   token: GetToken(),
-  signingSecret: GetSigningSecret(),
+  signingSecret: GetSecret(),
   appToken: GetAppId(),
   logLevel: LogLevel.DEBUG,
 });
